@@ -1,6 +1,6 @@
 import React from 'react';
 import AddOption from './AddOption';
-import Action from './Action';
+import DatePicker from './DatePicker';
 import Header from './Header';
 import Options from './Options';
 import OptionModal from './OptionModal';
@@ -61,13 +61,13 @@ export default class IndecisionApp extends React.Component {
     console.log('componentWillUnmount');
   }
   render() {
-    const subtitle = 'Put your life in the hands of a computer';
+    const subtitle = 'Put your life in the hands of a cat';
 
     return (
       <div>
         <Header subtitle={subtitle} />
         <div className="container">
-          <Action
+          <DatePicker
             hasOptions={this.state.options.length > 0}
             handlePick={this.handlePick}
           />
