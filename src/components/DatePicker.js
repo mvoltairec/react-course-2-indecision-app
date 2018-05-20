@@ -1,15 +1,33 @@
 import React from 'react';
+import DatePicker from 'material-ui/DatePicker';
 
-const  DatePicker = (props) => (
-  <div>
-    <button
-      className="big-button"
-      onClick={props.handlePick}
-      disabled={!props.hasOptions}
-    >
-      This Should Be a Giant Date Picker
-      </button>
-  </div>
-);
+/**
+ * `DatePicker` can be implemented as a controlled input,
+ * where `value` is handled by state in the parent component.
+ */
+export default class DatePickerExample extends React.Component {
 
-export default DatePicker;
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      controlledDate: null,
+    };
+  }
+
+  handleChange = (event, date) => {
+    this.setState({
+      controlledDate: date,
+    });
+  };
+
+  render() {
+    return (
+      <DatePicker
+        hintText="Date of Entry"
+        value={this.state.controlledDate}
+        onChange={this.handleChange}
+      />
+    );
+  }
+}

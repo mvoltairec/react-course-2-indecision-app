@@ -1,19 +1,22 @@
 .header {
-  background: $off-black;
-  color: white;
+  background: #fff;
+  color: $eerie-black;
   margin-bottom: $m-size;
-  padding: $m-size 0;
+  padding: $l-size 0;
+  text-align: center;
 }
 
 .header__title {
   font-size: $l-size;
   margin: 0;
+  padding: $m-size;
 }
 
 .header__subtitle {
   color: $off-white;
   font-size: $m-size;
   font-weight: 500;
+  // line-height: 2rem;
   margin: 0;
 }
 

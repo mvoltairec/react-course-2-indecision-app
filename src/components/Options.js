@@ -4,7 +4,7 @@ import Option from './Option';
 const Options = (props) => (
   <div>
     <div className="widget-header">
-      <h3 className="widget-header__title">Your Options</h3>
+      <h3 className="widget-header__title">Your Gratitude Journal Entries</h3>
       <button
         className="button button--link"
         onClick={props.handleDeleteOptions}
@@ -13,7 +13,7 @@ const Options = (props) => (
     </button>
     </div>
 
-    {props.options.length === 0 && <p className="widget__message">Please add an option to get started!</p>}
+    {props.options.length === 0 && <p className="widget__message">Use this tool to write about things you are grateful for and let it inspire you to act with kindness towards others! Double click to edit entries</p>}
     {
       props.options.map((option, index) => (
         <Option

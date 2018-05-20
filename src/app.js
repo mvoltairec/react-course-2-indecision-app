@@ -1,7 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import IndecisionApp from './components/IndecisionApp';
+import GratitudeApp from './components/GratitudeApp';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-ReactDOM.render(<IndecisionApp />, document.getElementById('app'));
+const App = () => (
+  <MuiThemeProvider>
+    <GratitudeApp />
+  </MuiThemeProvider>
+);
+ 
+
+ReactDOM.render(<App />, document.getElementById('app'));
